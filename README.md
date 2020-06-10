@@ -1,6 +1,6 @@
 # ActEV Base Environment
 
-Version 0.1
+![Build and Publish Docker Image](https://github.com/Lijun-Yu/actev_base/workflows/Build%20and%20Publish%20Docker%20Image/badge.svg) Version 0.1
 
 Author: Lijun Yu
 
@@ -22,7 +22,11 @@ Base image for [ActEV SDL](https://actev.nist.gov/sdl) submission of CMU.
 
 ### Docker Image
 
-See [docker image]().
+```sh
+docker pull docker.pkg.github.com/lijun-yu/actev_base/actev_base:latest
+```
+
+See [docker image](https://github.com/Lijun-Yu/actev_base/packages/262958).
 
 ### Local Development
 

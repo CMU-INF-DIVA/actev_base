@@ -21,4 +21,5 @@ RUN apt-get -qq update \
 ADD environment.yml .
 RUN conda env create -f environment.yml -p /app/env \
     && echo "conda activate /app/env" >> ~/.bashrc \
-    && conda clean -ayq
+    && conda clean -ayq \
+    && /app/env/bin/pip cache purge

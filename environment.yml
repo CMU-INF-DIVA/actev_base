@@ -10,6 +10,7 @@ dependencies:
   - torchvision
   - anaconda
   - pip:
+    - pip
     - avi-r
     - py-turbo
     - moviepy
