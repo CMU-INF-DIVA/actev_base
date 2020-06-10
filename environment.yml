@@ -6,12 +6,12 @@ dependencies:
   - python=3.8
   - pytorch=1.5
   - cudatoolkit=10.2
+  - pip
   - torchvision
   - anaconda
   - pip:
     - avi-r
     - py-turbo
     - moviepy
-    - pycocotools
-    - detectron2==0.1.2
+    - detectron2
     - -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.5/index.html

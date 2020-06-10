@@ -6,7 +6,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
     online=true
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
-ADD environment.yml .
 
 RUN apt-get -qq update \
     && apt-get -qq -y install wget \
@@ -17,7 +16,9 @@ RUN apt-get -qq update \
     && echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
     && apt-get -qq remove wget \
     && apt-get -qq autoremove \
-    && apt-get -qq clean \
-    && conda env create -f environment.yml -p /app/env \
+    && apt-get -qq clean
+
+ADD environment.yml .
+RUN conda env create -f environment.yml -p /app/env \
     && echo "conda activate /app/env" >> ~/.bashrc \
     && conda clean -ayq
