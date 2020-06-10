@@ -1,0 +1,17 @@
+name: actev
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch=1.5
+  - cudatoolkit=10.2
+  - torchvision
+  - anaconda
+  - pip:
+    - avi-r
+    - py-turbo
+    - moviepy
+    - pycocotools
+    - detectron2==0.1.2
+    - -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.5/index.html
