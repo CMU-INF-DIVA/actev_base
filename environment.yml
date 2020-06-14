@@ -14,5 +14,6 @@ dependencies:
     - avi-r
     - py-turbo
     - moviepy
+    - pycocotools
     - detectron2
     - -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.5/index.html
