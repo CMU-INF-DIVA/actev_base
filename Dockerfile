@@ -18,7 +18,7 @@ RUN apt-get -qq update \
     && apt-get -qq autoremove \
     && apt-get -qq clean
 
-ADD environment.yml .
+ADD environment.yml requirements.txt ./
 RUN apt-get -qq -y install gcc \
     && conda env create -f environment.yml -p /app/env \
     && echo "conda activate /app/env" >> ~/.bashrc \

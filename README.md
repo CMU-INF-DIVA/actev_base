@@ -1,6 +1,6 @@
 # ActEV Base Environment
 
-![Build and Publish Docker Image](https://github.com/Lijun-Yu/actev_base/workflows/Build%20and%20Publish%20Docker%20Image/badge.svg) Version 0.1
+![Build and Publish Docker Image](https://github.com/Lijun-Yu/actev_base/workflows/Build%20and%20Publish%20Docker%20Image/badge.svg) Version 0.2
 
 Author: Lijun Yu
 
