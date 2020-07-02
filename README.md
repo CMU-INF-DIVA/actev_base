@@ -24,10 +24,10 @@ Base image for [ActEV SDL](https://actev.nist.gov/sdl) submission of CMU.
 ### Docker Image
 
 ```sh
-docker pull docker.pkg.github.com/lijun-yu/actev_base/actev_base:latest
+docker pull docker.pkg.github.com/cmu-inf-diva/actev_base/actev_base:latest
 ```
 
-See [docker image](https://github.com/Lijun-Yu/actev_base/packages/262958).
+See [docker image](https://github.com/CMU-INF-DIVA/actev_base/packages/262958).
 
 ### Local Development
 
