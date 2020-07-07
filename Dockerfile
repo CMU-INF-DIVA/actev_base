@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.2-cudnn7-runtime
+FROM nvidia/cuda:10.1-cudnn7-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
     FVCORE_CACHE="/app/cache" \
