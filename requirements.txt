@@ -2,6 +2,8 @@ avi-r
 py-turbo
 moviepy
 webcolors
+munkres
+dill
 pycocotools
 detectron2
 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.5/index.html

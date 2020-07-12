@@ -18,6 +18,7 @@ Base image for [ActEV SDL](https://actev.nist.gov/sdl) submission of CMU.
 * [detectron2](https://github.com/facebookresearch/detectron2)
 * [py-turbo](https://github.com/Lijun-Yu/pyturbo)
 * [avi-r](https://github.com/Lijun-Yu/avi-r)
+* Dependencies of [ActEV_Scorer](https://github.com/usnistgov/ActEV_Scorer)
 
 ## Usage
 
