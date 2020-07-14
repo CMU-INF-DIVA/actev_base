@@ -4,6 +4,8 @@ moviepy
 webcolors
 munkres
 dill
+lap
+cython_bbox
 pycocotools
 detectron2
 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.5/index.html
