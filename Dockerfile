@@ -19,11 +19,11 @@ RUN apt-get -qq update \
     && apt-get -qq clean
 
 ADD environment.yml requirements.txt ./
-RUN apt-get -qq -y install gcc \
+RUN apt-get -qq -y install gcc g++ \
     && conda env create -f environment.yml -p /app/env \
     && echo "conda activate /app/env" >> ~/.bashrc \
     && conda clean -ayq \
     && /app/env/bin/pip cache purge \
-    && apt-get -qq remove gcc \
+    && apt-get -qq remove gcc g++ \
     && apt-get -qq autoremove \
     && apt-get -qq clean
