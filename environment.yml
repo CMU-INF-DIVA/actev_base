@@ -5,7 +5,7 @@ channels:
   - defaults
 dependencies:
   - python=3.7
-  - pytorch
+  - pytorch=1.6
   - cudatoolkit=10.1
   - pip
   - opencv
