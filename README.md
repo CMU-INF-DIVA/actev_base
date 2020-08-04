@@ -12,7 +12,7 @@ Base image for [ActEV SDL](https://actev.nist.gov/sdl) submission of CMU.
 
 * [python](https://www.python.org) 3.7
 * [cuda](https://developer.nvidia.com/cuda-downloads) 10.1
-* [pytorch](https://pytorch.org) 1.5
+* [pytorch](https://pytorch.org)
 * [opencv](https://opencv.org)
 * [open3d](http://www.open3d.org/)
 * [anaconda](https://docs.anaconda.com/anaconda/packages/pkg-docs/)
