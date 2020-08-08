@@ -1,5 +1,5 @@
-avi-r
 py-turbo
+avi-r
 moviepy
 webcolors
 munkres
