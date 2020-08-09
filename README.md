@@ -10,32 +10,35 @@ Base image for [ActEV SDL](https://actev.nist.gov/sdl) submission of CMU.
 
 ## Environment
 
-* [python](https://www.python.org) 3.7
-* [cuda](https://developer.nvidia.com/cuda-downloads) 10.1
-* [pytorch](https://pytorch.org) 1.6
-* [opencv](https://opencv.org)
-* [open3d](http://www.open3d.org/)
-* [anaconda](https://docs.anaconda.com/anaconda/packages/pkg-docs/)
-* [detectron2](https://github.com/facebookresearch/detectron2)
-* [py-turbo](https://github.com/Lijun-Yu/pyturbo)
-* [avi-r](https://github.com/Lijun-Yu/avi-r)
+* [Python](https://www.python.org) 3.7
+* [CUDA](https://developer.nvidia.com/cuda-downloads) 10.1
+* [PyTorch](https://pytorch.org) 1.6
+* [OpenCV](https://opencv.org)
+* [Open3D](http://www.open3d.org/)
+* [Anaconda](https://docs.anaconda.com/anaconda/packages/pkg-docs/)
+* [Detectron2](https://github.com/facebookresearch/detectron2)
+* [Pyturbo](https://github.com/Lijun-Yu/pyturbo)
+* [AVI-R](https://github.com/Lijun-Yu/avi-r)
 * Dependencies of [ActEV_Scorer](https://github.com/usnistgov/ActEV_Scorer)
 
 ## Usage
 
-### Docker Image
+### [docker image](https://github.com/CMU-INF-DIVA/actev_base/packages/262958)
 
 ```sh
-docker pull docker.pkg.github.com/cmu-inf-diva/actev_base/actev_base:latest
+image=docker.pkg.github.com/cmu-inf-diva/actev_base/actev_base:latest
+docker pull $image
+
+# Test it
+docker run -it --rm --gpus all --ipc host $image bash -ic "python -c 'import torch; assert torch.cuda.is_available()'; nvidia-smi"
 ```
 
-See [docker image](https://github.com/CMU-INF-DIVA/actev_base/packages/262958).
+Container directory structure
 
-Test it
-
-```sh
-docker run -it --rm --gpus all --ipc host docker.pkg.github.com/cmu-inf-diva/actev_base/actev_base:latest bash -ic "python -c 'import torch; assert torch.cuda.is_available()'; nvidia-smi"
-```
+* `/app` - Work directory
+  * `env` - Python environment
+  * `core` - System implementation
+  * `data` - Mount point for data
 
 ### Local Development
 

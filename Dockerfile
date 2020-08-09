@@ -1,10 +1,11 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    PATH="/opt/conda/bin:$PATH" \
+    PATH="/app/env/bin:/opt/conda/bin:$PATH" \
     PYTURBO_OPTIONS=no_progress_bar
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
+VOLUME /app/data
 
 RUN apt-get -qq update && \
     apt-get -qq -y install wget && \
