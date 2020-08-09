@@ -18,7 +18,7 @@ RUN apt-get -qq update \
 
 ADD environment.yml requirements.txt ./
 RUN apt-get -qq -y install gcc g++ \
-    && conda env create -f environment.yml -p /app/env \
+    && CC="cc -mavx2" conda env create -f environment.yml -p /app/env \
     && echo "conda activate /app/env" >> ~/.bashrc \
     && conda clean -ayq \
     && /app/env/bin/pip cache purge \
