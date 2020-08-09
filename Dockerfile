@@ -14,7 +14,6 @@ RUN apt-get -qq update \
     && rm miniconda.sh \
     && ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
     && echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
-    && apt-get -qq remove wget \
     && apt-get -qq autoremove \
     && apt-get -qq clean
 
