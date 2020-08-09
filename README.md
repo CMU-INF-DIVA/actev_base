@@ -34,7 +34,7 @@ See [docker image](https://github.com/CMU-INF-DIVA/actev_base/packages/262958).
 Test it
 
 ```sh
-docker run -it --gpus all --ipc host --rm docker.pkg.github.com/cmu-inf-diva/actev_base/actev_base:latest bash -ic "python -c 'import torch; assert torch.cuda.is_available()'; nvidia-smi"
+docker run -it --rm --gpus all --ipc host docker.pkg.github.com/cmu-inf-diva/actev_base/actev_base:latest bash -ic "python -c 'import torch; assert torch.cuda.is_available()'; nvidia-smi"
 ```
 
 ### Local Development
