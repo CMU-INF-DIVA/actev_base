@@ -1,9 +1,8 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    FVCORE_CACHE="/app/cache" \
     PATH="/opt/conda/bin:$PATH" \
-    online=true
+    PYTURBO_OPTIONS=no_progress_bar
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
 
