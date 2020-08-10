@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
 VOLUME /app/data
+LABEL maintainer="Lijun Yu @ CMU INF Lab"
 
 RUN apt-get -qq update && \
     apt-get -qq -y install wget && \
