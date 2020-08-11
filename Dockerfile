@@ -26,4 +26,5 @@ RUN apt-get -qq -y install gcc g++ && \
     /app/env/bin/pip cache purge && \
     apt-get -qq remove gcc g++ && \
     apt-get -qq autoremove && \
-    apt-get -qq clean
+    apt-get -qq clean && \
+    rm environment.yml requirements.txt
