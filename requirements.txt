@@ -10,5 +10,7 @@ pycocotools
 retrying
 einops
 pillow-simd
+decord
+test_tube
 detectron2
 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.6/index.html
