@@ -10,6 +10,8 @@ pycocotools
 retrying
 einops
 pillow-simd
+pytorch-lightning
+optuna
 decord
 test_tube
 detectron2
