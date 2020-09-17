@@ -19,7 +19,8 @@ RUN apt-get -qq update && \
     apt-get -qq clean
 
 ADD environment.yml requirements.txt ./
-RUN apt-get -qq -y install gcc g++ && \
+RUN apt-get -qq update && \
+    apt-get -qq -y install gcc g++ libgl1-mesa-dev && \
     CC="cc -mavx2" conda env create -f environment.yml -p /app/env && \
     echo "conda activate /app/env" >> ~/.bashrc && \
     conda clean -ayq && \
