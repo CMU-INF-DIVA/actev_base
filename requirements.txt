@@ -1,6 +1,7 @@
 py-turbo
 avi-r
 moviepy
+opencv-python
 webcolors
 munkres
 dill
