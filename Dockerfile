@@ -1,8 +1,5 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime
 
-ENV DEBIAN_FRONTEND=noninteractive \
-    PATH="/app/env/bin:/opt/conda/bin:$PATH" \
-    PYTURBO_OPTIONS=no_progress_bar
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
 VOLUME /app/data
@@ -21,9 +18,12 @@ RUN apt-get -qq update && \
 ADD . env_build
 RUN apt-get -qq update && \
     apt-get -qq -y install gcc g++ pkg-config libgl1-mesa-dev && \
-    conda update -n base -c defaults conda && \
+    source /opt/conda/etc/profile.d/conda.sh && \
+    conda update -y -n base -c defaults conda && \
     CC="cc -mavx2" PKG_CONFIG_PATH="/app/env/lib/pkgconfig:$PKG_CONFIG_PATH" \
-    conda env create -f env_build/environment.yml -p /app/env && \
+        conda env create -f env_build/environment.yml -p /app/env && \
+    conda env config vars -p /app/env set FFMPEG_BINARY=auto-detect \
+        PYTURBO_OPTIONS=no_progress_bar && \
     echo "conda activate /app/env" >> ~/.bashrc && \
     conda clean -ayq && \
     /app/env/bin/pip cache purge && \
@@ -31,3 +31,4 @@ RUN apt-get -qq update && \
     apt-get -qq autoremove && \
     apt-get -qq clean && \
     rm -r env_build
+ENV PATH="/app/env/bin:$PATH"
