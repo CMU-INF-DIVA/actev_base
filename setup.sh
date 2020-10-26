@@ -1,9 +1,11 @@
 #! /bin/bash
 
+set -e
+
 cd $(cd $(dirname $0); pwd)
 source $(dirname $CONDA_EXE)/../etc/profile.d/conda.sh
 
-while [ $CONDA_DEFAULT_ENV != base ];
+while [ -n $CONDA_DEFAULT_ENV ] && [ $CONDA_DEFAULT_ENV != base ];
 do
     conda deactivate
 done
