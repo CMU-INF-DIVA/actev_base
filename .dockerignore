@@ -1,5 +1,6 @@
 README.md
 Dockerfile
+setup.sh
 .dockerignore
 .git
 .gitignore

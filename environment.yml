@@ -7,10 +7,30 @@ dependencies:
   - python=3.7
   - pytorch=1.6
   - cudatoolkit=10.1
+  - ffmpeg>=4.3
   - pip
   - open3d
   - torchvision
   - anaconda
   - pip:
     - pip
-    - -r requirements.txt
+    - detectron2
+    - -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.6/index.html
+    - av --no-binary av
+    - opencv-python
+    - pytorch-lightning
+    - pillow-simd
+    - avi-r
+    - py-turbo
+    - moviepy
+    - decord
+    - test_tube
+    - retrying
+    - pycocotools
+    - webcolors
+    - munkres
+    - dill
+    - lap
+    - cython_bbox
+    - einops
+    - optuna

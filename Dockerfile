@@ -18,14 +18,16 @@ RUN apt-get -qq update && \
     apt-get -qq autoremove && \
     apt-get -qq clean
 
-ADD environment.yml requirements.txt ./
+ADD . env_build
 RUN apt-get -qq update && \
-    apt-get -qq -y install gcc g++ libgl1-mesa-dev && \
-    CC="cc -mavx2" conda env create -f environment.yml -p /app/env && \
+    apt-get -qq -y install gcc g++ pkg-config libgl1-mesa-dev && \
+    conda update -n base -c defaults conda && \
+    CC="cc -mavx2" PKG_CONFIG_PATH="/app/env/lib/pkgconfig:$PKG_CONFIG_PATH" \
+    conda env create -f env_build/environment.yml -p /app/env && \
     echo "conda activate /app/env" >> ~/.bashrc && \
     conda clean -ayq && \
     /app/env/bin/pip cache purge && \
-    apt-get -qq remove gcc g++ && \
+    apt-get -qq remove gcc g++ pkg-config && \
     apt-get -qq autoremove && \
     apt-get -qq clean && \
-    rm environment.yml requirements.txt
+    rm -r env_build

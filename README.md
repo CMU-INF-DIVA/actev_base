@@ -47,7 +47,5 @@ Container directory structure
 Install [miniconda](https://conda.io/en/latest/miniconda.html), then run
 
 ```sh
-conda env create -f environment.yml
-# Or, to use a faster pillow-simd on supported cpus:
-CC="cc -mavx2" conda env create -f environment.yml
+./setup.sh
 ```
