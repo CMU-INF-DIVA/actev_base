@@ -22,8 +22,8 @@ RUN apt-get -qq update && \
     conda update -y -n base -c defaults conda && \
     CC="cc -mavx2" PKG_CONFIG_PATH="/app/env/lib/pkgconfig:$PKG_CONFIG_PATH" \
         conda env create -f env_build/environment.yml -p /app/env && \
-    conda env config vars -p /app/env set FFMPEG_BINARY=auto-detect \
-        PYTURBO_OPTIONS=no_progress_bar && \
+    conda env config vars set FFMPEG_BINARY=auto-detect \
+        PYTURBO_OPTIONS=no_progress_bar -p /app/env && \
     echo "conda activate /app/env" >> ~/.bashrc && \
     conda clean -ayq && \
     /app/env/bin/pip cache purge && \
