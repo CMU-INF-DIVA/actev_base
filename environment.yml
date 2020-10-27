@@ -1,22 +1,18 @@
 name: actev
-channels:
-  - pytorch
-  - open3d-admin
-  - defaults
 dependencies:
   - python=3.7
-  - pytorch=1.6
   - cudatoolkit=10.1
-  - ffmpeg>=4.3
-  - pip
-  - open3d
-  - torchvision
+  - pytorch::pytorch=1.6
+  - pytorch::torchvision
+  - open3d-admin::open3d
   - anaconda
+  - cudnn
+  - pip
   - pip:
     - pip
     - detectron2
     - -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.6/index.html
-    - av --no-binary av
+    - av
     - opencv-python
     - pytorch-lightning
     - pillow-simd

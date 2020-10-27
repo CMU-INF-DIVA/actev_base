@@ -20,10 +20,10 @@ RUN apt-get -qq update && \
     apt-get -qq -y install gcc g++ pkg-config libgl1-mesa-dev && \
     source /opt/conda/etc/profile.d/conda.sh && \
     conda update -y -n base -c defaults conda && \
-    CC="cc -mavx2" PKG_CONFIG_PATH="/app/env/lib/pkgconfig:$PKG_CONFIG_PATH" \
-        conda env create -f env_build/environment.yml -p /app/env && \
-    conda env config vars set FFMPEG_BINARY=auto-detect \
-        PYTURBO_OPTIONS=no_progress_bar -p /app/env && \
+    CC="cc -mavx2" conda env create \
+        -f env_build/environment.yml -p /app/env && \
+    conda activate /app/env && \
+    env_build/update_ffmpeg.sh && \
     echo "conda activate /app/env" >> ~/.bashrc && \
     conda clean -ayq && \
     /app/env/bin/pip cache purge && \
@@ -31,4 +31,6 @@ RUN apt-get -qq update && \
     apt-get -qq autoremove && \
     apt-get -qq clean && \
     rm -r env_build
-ENV PATH="/app/env/bin:$PATH"
+ENV PATH="/app/env/bin:$PATH" \
+    FFMPEG_BINARY=auto-detect \
+    PYTURBO_OPTIONS=no_progress_bar
