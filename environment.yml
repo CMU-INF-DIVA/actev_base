@@ -1,4 +1,3 @@
-name: actev
 dependencies:
   - python=3.7
   - cudatoolkit=10.1
@@ -30,3 +29,4 @@ dependencies:
     - cython_bbox
     - einops
     - optuna
+    - git+https://github.com/facebookresearch/SlowFast.git
