@@ -9,6 +9,8 @@ git clone --recursive https://github.com/pytorch/pytorch
 cd pytorch
 git fetch origin pull/40801/head:local
 git checkout local
+git submodule sync
+git submodule update --init --recursive
 
 export CMAKE_PREFIX_PATH=${CONDA_PREFIX:-"$(dirname $(which conda))/../"}
 python setup.py install
