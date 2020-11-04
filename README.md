@@ -47,5 +47,12 @@ Container directory structure
 Install [miniconda](https://conda.io/en/latest/miniconda.html), then run
 
 ```sh
-./setup.sh
+./setup.sh [<name>] # name defaults to `actev`
+```
+
+If you want to patch `PyTorch` with this [PR](https://github.com/pytorch/pytorch/pull/40801), run
+
+```sh
+conda activate <name>
+./patch_pytorch.sh
 ```
