@@ -19,7 +19,7 @@ Base image for [ActEV SDL](https://actev.nist.gov/sdl) submission of CMU.
 * [Anaconda](https://docs.anaconda.com/anaconda/packages/pkg-docs/)
 * [Detectron2](https://github.com/facebookresearch/detectron2)
 * [Pyturbo](https://github.com/CMU-INF-DIVA/pyturbo)
-* [AVI-R](https://github.com/CMU-INF-DIVA/avi-r)
+* [AVI-R](https://github.com/CMU-INF-DIVA/avi-r) with [FFmpeg](https://ffmpeg.org) 4.3.1
 * Dependencies of [ActEV_Scorer](https://github.com/usnistgov/ActEV_Scorer)
 
 ## Usage
