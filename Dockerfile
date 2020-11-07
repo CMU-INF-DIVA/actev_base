@@ -17,7 +17,7 @@ RUN apt-get -qq update && \
 
 ADD . env_build
 RUN apt-get -qq update && \
-    apt-get -qq -y install gcc g++ pkg-config libgl1-mesa-dev && \
+    apt-get -qq -y install git gcc g++ pkg-config libgl1-mesa-dev && \
     source /opt/conda/etc/profile.d/conda.sh && \
     conda update -y -n base -c defaults conda && \
     CC="cc -mavx2" conda env create \
