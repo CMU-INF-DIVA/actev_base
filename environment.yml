@@ -30,3 +30,5 @@ dependencies:
     - einops
     - optuna
     - git+https://github.com/facebookresearch/SlowFast.git
+    - addict
+    - plyfile
