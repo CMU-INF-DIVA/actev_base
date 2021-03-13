@@ -11,9 +11,9 @@ dependencies:
     - pip
     - detectron2
     - -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.6/index.html
+    - pytorch-lightning<1.2.0
     - av
     - opencv-python
-    - pytorch-lightning
     - pillow-simd
     - avi-r
     - py-turbo
