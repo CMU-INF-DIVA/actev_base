@@ -4,6 +4,7 @@ dependencies:
   - pytorch::pytorch=1.6
   - pytorch::torchvision
   - open3d-admin::open3d
+  - numba
   - anaconda
   - cudnn
   - pip
