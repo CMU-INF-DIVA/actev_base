@@ -3,6 +3,7 @@ FROM nvidia/cuda:10.1-cudnn7-runtime
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
 VOLUME /app/data
+LABEL org.opencontainers.image.source https://github.com/CMU-INF-DIVA/actev_base
 LABEL maintainer="Lijun Yu @ CMU INF Lab"
 
 RUN apt-get -qq update && \
