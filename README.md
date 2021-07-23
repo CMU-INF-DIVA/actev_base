@@ -1,6 +1,6 @@
 # ActEV Base Environment
 
-[![](https://images.microbadger.com/badges/version/cmuinfdiva/actev_base.svg)](https://microbadger.com/images/cmuinfdiva/actev_base "Get your own version badge on microbadger.com")
+[![Docker Image](https://github.com/CMU-INF-DIVA/actev_base/actions/workflows/docker-image.yml/badge.svg)](https://github.com/CMU-INF-DIVA/actev_base/actions/workflows/docker-image.yml)
 
 Author: Lijun Yu
 
@@ -26,13 +26,14 @@ Base image for [ActEV SDL](https://actev.nist.gov/sdl) submission of CMU.
 
 ### Docker Image
 
-[DockerHub](https://hub.docker.com/r/cmuinfdiva/actev_base)
+[Github Packages](https://github.com/orgs/CMU-INF-DIVA/packages/container/package/actev_base)
 
 ```sh
-docker pull cmuinfdiva/actev_base
+docker pull ghcr.io/cmu-inf-diva/actev_base
 
 # Test it
-docker run -it --rm --gpus all --ipc host cmuinfdiva/actev_base bash -ic "python -c 'import torch; assert torch.cuda.is_available()'; nvidia-smi"
+docker run -it --rm --gpus all --ipc host ghcr.io/cmu-inf-diva/actev_base \
+    bash -ic "python -c 'import torch; assert torch.cuda.is_available()'; nvidia-smi"
 ```
 
 Container directory structure
