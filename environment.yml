@@ -37,3 +37,4 @@ dependencies:
     - plyfile
     - pyarmor
     - selenium
+    - timm
