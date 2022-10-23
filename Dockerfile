@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-runtime
+FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 
 SHELL ["/bin/bash", "-c"]
 WORKDIR /app
