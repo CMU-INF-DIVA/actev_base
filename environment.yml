@@ -38,3 +38,7 @@ dependencies:
     - pyarmor
     - selenium
     - timm
+    - smplx
+    - chumpy
+    - trimesh
+    - pyrender
